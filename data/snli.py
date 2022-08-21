@@ -65,7 +65,7 @@ class SNLIDataset(dataset.DatasetExperiment):
         return self.test[[ColumnType.sentence1.name, ColumnType.sentence2.name]].to_numpy()
     
     def test_labels(self):
-        return self.test[ColumnType.labels.name].values()
+        return self.test[ColumnType.labels.name].to_numpy()
     
     def _data_path(self):
         return 'corpora/SNLI/'
