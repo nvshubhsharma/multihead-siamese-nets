@@ -44,28 +44,28 @@ class SNLIDataset(dataset.DatasetExperiment):
         return self.train
     
     def train_set_pairs(self):
-        return self.train[[ColumnType.sentence1.name, ColumnType.sentence2.name]].as_matrix()
+        return self.train[[ColumnType.sentence1.name, ColumnType.sentence2.name]].values()
     
     def train_labels(self):
-        return self.train[ColumnType.labels.name].as_matrix()
+        return self.train[ColumnType.labels.name].values()
     
     def dev_set(self):
         return self.dev
     
     def dev_set_pairs(self):
-        return self.dev[[ColumnType.sentence1.name, ColumnType.sentence2.name]].as_matrix()
+        return self.dev[[ColumnType.sentence1.name, ColumnType.sentence2.name]].values()
     
     def dev_labels(self):
-        return self.dev[ColumnType.labels.name].as_matrix()
+        return self.dev[ColumnType.labels.name].values()
     
     def test_set(self):
         return self.test
     
     def test_set_pairs(self):
-        return self.test[[ColumnType.sentence1.name, ColumnType.sentence2.name]].as_matrix()
+        return self.test[[ColumnType.sentence1.name, ColumnType.sentence2.name]].values()
     
     def test_labels(self):
-        return self.test[ColumnType.labels.name].as_matrix()
+        return self.test[ColumnType.labels.name].values()
     
     def _data_path(self):
         return 'corpora/SNLI/'
