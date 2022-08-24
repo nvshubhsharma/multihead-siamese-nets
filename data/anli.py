@@ -47,28 +47,28 @@ class ANLIDataset(dataset.DatasetExperiment):
         return self.train
     
     def train_set_pairs(self):
-        return self.train[['hypothesis', 'reason']].as_matrix()
+        return self.train[['hypothesis', 'reason']].to_numpy()
     
     def train_labels(self):
-        return self.train['label'].as_matrix()
+        return self.train['label'].to_numpy()
     
     def dev_set(self):
         return self.dev
     
     def dev_set_pairs(self):
-        return self.dev[['hypothesis', 'reason']].as_matrix()
+        return self.dev[['hypothesis', 'reason']].to_numpy()
     
     def dev_labels(self):
-        return self.dev['label'].as_matrix()
+        return self.dev['label'].to_numpy()
     
     def test_set(self):
         return self.test
     
     def test_set_pairs(self):
-        return self.test[['hypothesis', 'reason']].as_matrix()
+        return self.test[['hypothesis', 'reason']].to_numpy()
     
     def test_labels(self):
-        return self.test['label'].as_matrix()
+        return self.test['label'].to_numpy()
     
     def _data_path(self):
         return 'corpora/ANLI/anli_v0.1/R3'
