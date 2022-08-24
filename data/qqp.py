@@ -25,28 +25,28 @@ class QQPDataset(dataset.DatasetExperiment):
         return self.train
     
     def train_set_pairs(self):
-        return self.train[['question1', 'question2']].as_matrix()
+        return self.train[['question1', 'question2']].to_numpy()
     
     def train_labels(self):
-        return self.train['is_duplicate'].as_matrix()
+        return self.train['is_duplicate'].to_numpy()
     
     def dev_set(self):
         return self.dev
     
     def dev_set_pairs(self):
-        return self.dev[['question1', 'question2']].as_matrix()
+        return self.dev[['question1', 'question2']].to_numpy()
     
     def dev_labels(self):
-        return self.dev['is_duplicate'].as_matrix()
+        return self.dev['is_duplicate'].to_numpy()
     
     def test_set(self):
         return self.test
     
     def test_set_pairs(self):
-        return self.test[['question1', 'question2']].as_matrix()
+        return self.test[['question1', 'question2']].to_numpy()
     
     def test_labels(self):
-        return self.test['is_duplicate'].as_matrix()
+        return self.test['is_duplicate'].to_numpy()
     
     def _data_path(self):
         return 'corpora/QQP/'
